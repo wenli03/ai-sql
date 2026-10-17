@@ -1,0 +1,20 @@
+# Core runtime for 数语 (Shuyu).
+# Python 3.11 or 3.12 is recommended (wrenai requires >=3.11).
+# Includes relational databases plus data-lake/lakehouse connectors:
+# PostgreSQL, MySQL, Oracle, SQL Server,
+# Trino (Iceberg/Delta/Hive), Databricks SQL (Delta Lake), Athena (S3/Glue),
+# ClickHouse and BigQuery. DuckDB is included in the base package.
+# SQL Server also requires an ODBC driver on the host.
+# Optional: Spark Connect requires `pip install "wrenai[spark]"` separately.
+wrenai[postgres,mysql,oracle,mssql,trino,databricks,athena,clickhouse,bigquery]==0.16.0
+
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+httpx>=0.27,<1
+jinja2>=3.1,<4
+python-dotenv>=1.0,<2
+
+# Explicitly pinned for readability; wrenai already depends on these.
+pandas>=2
+PyYAML>=6
+sqlglot>=29

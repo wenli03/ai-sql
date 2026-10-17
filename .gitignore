@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local secrets and generated state
+wren-insight/.env
+wren-insight/data/connections.json
+wren-insight/data/reports/
+wren-insight/projects/
+wren-insight/data/settings.json
+wren-insight/bench/results/
+
+# Upstream clone (reproduce with: git clone --depth 1 https://github.com/Canner/WrenAI.git WrenAI)
+WrenAI/
+
+# Local screenshots / scratch files
+ui-*.png
+*.log

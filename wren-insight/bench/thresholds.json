@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "updated_at": null,
+  "note": "baseline 由 `python -m bench.runner --update-baseline` 写入，是实测值不是目标值。targets 为门禁：null 表示该指标尚未校准，runner 会跳过不判失败。A3（首屏 <=350KB）是静态可判定的，已直接设定。",
+  "baseline": {},
+  "targets": {
+    "p50_wall_ms_max": null,
+    "p95_wall_ms_max": null,
+    "p50_context_ms_max": null,
+    "first_try_rate_min": null,
+    "success_rate_min": null,
+    "lineage_coverage_min": null,
+    "first_screen_kb_max": 350
+  }
+}

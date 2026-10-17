@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "note": "固定问题集：所有耗时/通过率阈值都基于这 20 条。修改此文件等于改变量尺，必须同步重跑基线。expect_chart 是期望图表族，仅用于统计图表命中率，不作为失败判据。",
+  "questions": [
+    { "id": "q01", "text": "最近6个月每月的销售额趋势", "expect_chart": "line" },
+    { "id": "q02", "text": "最近3个月各渠道的销售额趋势", "expect_chart": "line" },
+    { "id": "q03", "text": "每月订单数趋势", "expect_chart": "line" },
+    { "id": "q04", "text": "各品类销售额排行", "expect_chart": "bar" },
+    { "id": "q05", "text": "销售额最高的10个商品", "expect_chart": "bar" },
+    { "id": "q06", "text": "各品类销售额占比", "expect_chart": "pie" },
+    { "id": "q07", "text": "各渠道的订单数和客单价对比", "expect_chart": "bar" },
+    { "id": "q08", "text": "各渠道退款率对比", "expect_chart": "bar" },
+    { "id": "q09", "text": "不同客户等级的客单价对比", "expect_chart": "bar" },
+    { "id": "q10", "text": "各省份销售额分布", "expect_chart": "bar" },
+    { "id": "q11", "text": "各省份订单数分布", "expect_chart": "bar" },
+    { "id": "q12", "text": "各支付方式的支付金额占比", "expect_chart": "pie" },
+    { "id": "q13", "text": "各性别客户数占比", "expect_chart": "pie" },
+    { "id": "q14", "text": "每月新增客户数趋势", "expect_chart": "line" },
+    { "id": "q15", "text": "各月份的客单价趋势", "expect_chart": "line" },
+    { "id": "q16", "text": "销售额最高的5个二级品类", "expect_chart": "bar" },
+    { "id": "q17", "text": "各城市的客户数排行", "expect_chart": "bar" },
+    { "id": "q18", "text": "各品类的毛利率对比", "expect_chart": "bar" },
+    { "id": "q19", "text": "各渠道的销量对比", "expect_chart": "bar" },
+    { "id": "q20", "text": "高价值客户有哪些", "expect_chart": "table" }
+  ]
+}

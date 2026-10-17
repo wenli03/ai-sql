@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>数语 · 本体增强的中文自然语言数据分析</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <span class="brand-glyph">数</span>
+        </div>
+        <div>
+          <div class="brand-title">数语</div>
+          <div class="brand-sub">本体增强的自然语言数据分析</div>
+        </div>
+      </div>
+
+      <div class="side-section">
+        <div class="side-label">
+          <span>数据连接</span>
+          <button id="add-connection" class="icon-btn" title="新增连接">+</button>
+        </div>
+        <select id="connection-select" class="select"></select>
+        <div id="connection-card" class="conn-card"></div>
+      </div>
+
+      <div class="side-section" id="semantic-section">
+        <div class="side-label">
+          <span>语义层</span>
+          <button id="edit-ontology" class="text-btn" disabled>编辑本体</button>
+        </div>
+        <div id="semantic-summary" class="semantic-summary"></div>
+        <div id="metrics-list" class="metrics-list"></div>
+      </div>
+
+      <div class="side-section grow">
+        <div class="side-label"><span>数据表</span></div>
+        <div id="tables-list" class="tables-list"></div>
+      </div>
+
+      <div class="side-footer">
+        <button id="theme-toggle" class="ghost-btn" title="切换主题">
+          <span class="theme-dot"></span><span id="theme-label">深色模式</span>
+        </button>
+        <div class="powered">Powered by WrenAI · DeepSeek</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="tabs">
+          <button class="tab active" data-view="analysis">分析</button>
+          <button class="tab" data-view="reports">报告</button>
+        </div>
+        <div class="topbar-right">
+          <span id="llm-status" class="status-pill">LLM 检查中…</span>
+          <button id="new-analysis" class="ghost-btn">新对话</button>
+        </div>
+      </header>
+
+      <section id="analysis-view" class="view">
+        <div id="messages" class="messages"></div>
+        <div id="composer-wrap" class="composer-wrap">
+          <div class="suggestions" id="suggestions"></div>
+          <div class="composer">
+            <textarea id="question-input" placeholder="问点什么，例如：最近6个月每月的销售额趋势" rows="1"></textarea>
+            <button id="send-btn" class="send-btn" title="发送">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </button>
+          </div>
+          <div class="composer-hint">Enter 发送 · Shift+Enter 换行 · 仅生成只读查询，最多返回 500 行</div>
+        </div>
+      </section>
+
+      <section id="reports-view" class="view hidden">
+        <div class="reports-layout">
+          <div class="reports-list-panel">
+            <div class="panel-head">
+              <h2>分析报告</h2>
+              <button id="create-report" class="primary-btn">新建报告</button>
+            </div>
+            <div id="reports-list" class="reports-list"></div>
+          </div>
+          <div id="report-detail" class="report-detail">
+            <div class="empty">选择或新建一份报告</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
